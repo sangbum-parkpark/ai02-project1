@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <strong>Perfume Flask</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/apply">apply</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/mylist">My_list</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/recommend">Recommendation</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">
+              새로운 향수를 등록해보세요
+          </h1>
+        </div>
+      </div>
+    </section>
+    <article>
+        <div>
+            <p>
+                <form action = "/applyphoto" method = "GET">
+                    <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Name" aria-label="First name" required name="name">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Brand" aria-label="Last name" required name="brand">
+                        </div>
+                    </div>
+                    <div><p>    </p></div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Discription" required name="description">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes" required name="notes">
+                    </div>
+                    <input type="checkbox" name="clean" value="clean">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </form>
+            </p>
+        </div>
+    </article>
+  </body>
+</html>

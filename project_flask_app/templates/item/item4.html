@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <strong>Perfume Flask</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/apply">apply</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/mylist">My_list</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/recommend">Recommendation</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">
+              Perfume info
+          </h1>
+        </div>
+      </div>
+    </section>
+    {% if html_my_list %}
+    {% if html_range %}
+    <article id="e6dc0270-eaeb-4d14-a528-d53872f970fa" class="page sans">
+        <div class="page-body">
+            <p id="7ec55267-e046-40c0-b4f8-fe9644219838" class=""></p>
+            <figure id="b770a152-8396-4d60-99a2-938aca2519e1" class="image">
+                <a href="{{html_my_list[4][5]}}">
+                    <img style="width:200px" src="{{html_my_list[4][5]}}"/>
+                </a>
+            </figure>
+            <p><strong>Name</strong></p>
+            <p>{{html_my_list[4][1]}}</p>
+            <p><strong>Brand</strong></p>
+            <p>{{html_my_list[4][2]}}</p>
+            <p><strong>Description</strong></p>
+            <p>{{html_my_list[4][3]}}</p>
+            <p><strong>Notes</strong></p>
+            <p>{{html_my_list[4][4]}}</p>
+        </div>
+    </article>
+    {% endif %}
+    {% endif %}
+
+  </body>
+</html>
